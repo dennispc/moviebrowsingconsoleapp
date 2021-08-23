@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace moviebrowsingconsoleapp.IModel
+namespace moviebrowsingconsoleapp.DPcode.Core.IModel
 {
     public interface IMenu
     {

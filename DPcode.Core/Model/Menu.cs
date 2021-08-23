@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using moviebrowsingconsoleapp.IModel;
+using moviebrowsingconsoleapp.DPcode.Core.IModel;
 
-namespace moviebrowsingconsoleapp.Model
+namespace moviebrowsingconsoleapp.DPcode.Core.Model
 {
-    public class Menu : IModel.IMenu
+    public class Menu : IMenu
     {
         public Menu(string _descriptor){
             this._descriptor=_descriptor;

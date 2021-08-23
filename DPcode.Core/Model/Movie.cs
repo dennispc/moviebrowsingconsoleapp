@@ -1,12 +1,14 @@
 using System;
-using moviebrowsingconsoleapp.IServices;
-using moviebrowsingconsoleapp.Services;
-namespace moviebrowsingconsoleapp{
+namespace moviebrowsingconsoleapp.DPcode.Core.Model{
     public class Movie{
 
         public string title{get;set;}
         public int year{get;set;}
         private int _id;
+
+        public int GetId(){
+            return _id;
+        }
 
         public Movie(int year, string title){
             this.title=title;
@@ -19,12 +21,6 @@ namespace moviebrowsingconsoleapp{
             this.title=title;
         }
 
-        public static Movie NewMovie()
-        {
-            IConsoleAsker consoleAsker = new ConsoleAsker();
-            string title = consoleAsker.GetStringFromTerminal("title:");
-            int validYear = consoleAsker.GetIntFromTerminal("Year: ");
-            return new Movie(validYear,title);
-        }
+        
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/moviebrowsingconsoleapp.csproj",
+      "projectUniqueName": "/home/dp/Documents/vscodeschool/moviebrowsingconsoleapp/moviebrowsingconsoleapp.csproj",
       "projectName": "moviebrowsingconsoleapp",
-      "projectPath": "/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/moviebrowsingconsoleapp.csproj",
+      "projectPath": "/home/dp/Documents/vscodeschool/moviebrowsingconsoleapp/moviebrowsingconsoleapp.csproj",
       "packagesPath": "/home/dp/.nuget/packages/",
-      "outputPath": "/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/",
+      "outputPath": "/home/dp/Documents/vscodeschool/moviebrowsingconsoleapp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dp/.nuget/NuGet/NuGet.Config"

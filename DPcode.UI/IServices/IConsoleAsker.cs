@@ -1,6 +1,11 @@
-namespace moviebrowsingconsoleapp.IServices{
+using moviebrowsingconsoleapp.DPcode.Core.Model;
+
+namespace moviebrowsingconsoleapp.DPcode.UI.IServices{
+    
     public interface IConsoleAsker{
-        public string GetStringFromTerminal(string str);
-        public int GetIntFromTerminal(string str);
+        string GetStringFromTerminal(string str);
+        int GetIntFromTerminal(string str);
+
+        Movie CreateNewMovie();
     }
 }

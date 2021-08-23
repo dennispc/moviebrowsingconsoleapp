@@ -1,6 +1,8 @@
-using moviebrowsingconsoleapp.IServices;
 using System;
-namespace moviebrowsingconsoleapp.Services
+using moviebrowsingconsoleapp.DPcode.Core.Model;
+using moviebrowsingconsoleapp.DPcode.UI.IServices;
+
+namespace moviebrowsingconsoleapp.DPcode.UI.Services
 {
     public class ConsoleAsker : IConsoleAsker
     {
@@ -28,6 +30,12 @@ namespace moviebrowsingconsoleapp.Services
                 Console.WriteLine("");
             }
             return text;
+        }
+        public Movie CreateNewMovie()
+        {
+            string title = GetStringFromTerminal("title:");
+            int validYear = GetIntFromTerminal("Year: ");
+            return new Movie(validYear,title);
         }
     }
 }

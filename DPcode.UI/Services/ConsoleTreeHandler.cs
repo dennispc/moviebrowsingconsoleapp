@@ -1,29 +1,31 @@
 using System;
 using System.Collections.Generic;
-using moviebrowsingconsoleapp.IModel;
-using moviebrowsingconsoleapp.IServices;
-using moviebrowsingconsoleapp.Services;
+using moviebrowsingconsoleapp.DPcode.Core.IModel;
+using moviebrowsingconsoleapp.DPcode.UI.IServices;
 
-namespace moviebrowsingconsoleapp.Model
+namespace moviebrowsingconsoleapp.DPcode.UI.Services
 {
-    public class ConsoleTreeHandler : IModel.IConsoleTreeHandler
+    public class ConsoleTreeHandler : IConsoleTreeHandler
     {
         private IMenu _menu;
+        private IConsoleAsker _consoleAsker;
 
-        public ConsoleTreeHandler(IMenu _menu){
+        public ConsoleTreeHandler(IMenu _menu, IConsoleAsker consoleAsker){
             this._menu=_menu;
+            this._consoleAsker=consoleAsker;
         }
         public IMenu GetCurrentBranch()
         {
             return _menu;
         }
 
-        public int GetResponse()
+        public string GetResponse()
         {
-            IConsoleAsker consoleAsker = new ConsoleAsker();
-            int number = consoleAsker.GetIntFromTerminal("");
-            _menu = _menu.GetBraches()[number-1];
-            return number;
+            int number = _consoleAsker.GetIntFromTerminal("");
+            if(number<_menu.GetBraches().Count)
+            return _menu.GetBraches()[number-1].GetDescriptor();
+            else 
+            throw new ArgumentOutOfRangeException();
         }
 
         public void PrintMenu()

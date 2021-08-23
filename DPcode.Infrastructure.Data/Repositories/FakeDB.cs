@@ -1,12 +1,18 @@
 using System.Collections.Generic;
-using moviebrowsingconsoleapp.IInfrastructure;
+using moviebrowsingconsoleapp.DPcode.Core.Model;
+using moviebrowsingconsoleapp.DPcode.Infrastructure.Data.IRepositories;
 
 namespace moviebrowsingconsoleapp.Infrastructure
 {
     public class FakeDB : IFakeDB
     {
         public static List<Movie> movies = new List<Movie>();
-        public Movie addMovie(Movie movie)
+
+        public FakeDB(){
+            for(int i = 0 ; i < 5 ; i++)
+            AddMovie(new Movie(120+i,("mov"+i)));
+        }
+        public Movie AddMovie(Movie movie)
         {
             int id = movies.Count+1;
             Movie mov = new Movie(id,movie.year,movie.title); 
@@ -14,24 +20,30 @@ namespace moviebrowsingconsoleapp.Infrastructure
             return movie;
         }
 
-        public bool deleteMovie()
+        public bool deleteMovie(Movie movie)
         {
-            throw new System.NotImplementedException();
+            movies.Remove(movie);
+            return true;
         }
 
         public List<Movie> getAllMovies()
         {
-            throw new System.NotImplementedException();
+            return movies;
         }
 
-        public Movie getMovie()
+        public Movie getMovie(int id)
         {
-            throw new System.NotImplementedException();
+            return movies[id];
         }
 
         public bool updateMovie(Movie movie)
         {
-            throw new System.NotImplementedException();
+            Movie mov = movies[movie.GetId()];
+            if(mov !=null) {
+            mov.title=movie.title;
+            mov.year=movie.year;
+            }
+            return mov !=null;
         }
     }
 }
