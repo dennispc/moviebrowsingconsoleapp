@@ -1,0 +1,1 @@
+should make interfaces for all implementetions, put em in i*- implementation name.

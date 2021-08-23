@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "moviebrowsingconsoleapp/1.0.0": {
+        "runtime": {
+          "moviebrowsingconsoleapp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "moviebrowsingconsoleapp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.csproj.AssemblyReference.cache
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.GeneratedMSBuildEditorConfig.editorconfig
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.AssemblyInfoInputs.cache
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.AssemblyInfo.cs
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.csproj.CoreCompileInputs.cache
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/bin/Debug/net5.0/moviebrowsingconsoleapp
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/bin/Debug/net5.0/moviebrowsingconsoleapp.deps.json
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/bin/Debug/net5.0/moviebrowsingconsoleapp.runtimeconfig.json
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/bin/Debug/net5.0/moviebrowsingconsoleapp.runtimeconfig.dev.json
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/bin/Debug/net5.0/moviebrowsingconsoleapp.dll
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/bin/Debug/net5.0/ref/moviebrowsingconsoleapp.dll
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/bin/Debug/net5.0/moviebrowsingconsoleapp.pdb
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.dll
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/ref/moviebrowsingconsoleapp.dll
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.pdb
+/home/dp/Documents/School_VSCode/moviebrowsingconsoleapp/obj/Debug/net5.0/moviebrowsingconsoleapp.genruntimeconfig.cache
