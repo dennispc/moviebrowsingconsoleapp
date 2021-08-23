@@ -20,11 +20,13 @@ namespace moviebrowsingconsoleapp
             public static IMenu menu3 = new Menu("Update movies");
             public static IMenu menu4 = new Menu("Delete movie");
 
-            static IConsoleAsker consoleAsker = new ConsoleAsker();
-            static IConsoleTreeHandler consoleTreeHandler = new ConsoleTreeHandler(menu, consoleAsker);
             static IFakeDB fakeDB = new FakeDB();
             static IDataManager dataManager = new DataManager(fakeDB);
+            static IConsoleAsker consoleAsker = new ConsoleAsker(dataManager);
+            static IConsoleTreeHandler consoleTreeHandler = new ConsoleTreeHandler(menu, consoleAsker);
             static IConsoleResponseHandler consoleResponseHandler = new ConsoleResponseHandler(consoleAsker,dataManager);
+
+            static bool stop = false;
 
 
         static void Main(string[] args){
@@ -34,12 +36,19 @@ namespace moviebrowsingconsoleapp
             menu.AddBranch(menu4);
 
             Init();
+
+            
         }
 
         public static void Init(){
-            
+            if(!stop){
             consoleTreeHandler.PrintMenu();
             consoleResponseHandler.HandleResonse(consoleTreeHandler.GetResponse());
+            }
+        }
+
+        public static void FlipStopBool(){
+            stop = ! stop;
         }
     }
 }

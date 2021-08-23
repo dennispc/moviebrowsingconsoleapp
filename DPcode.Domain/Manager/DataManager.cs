@@ -20,18 +20,23 @@ namespace moviebrowsingconsoleapp.DPcode.Domain.Manager
 
         public bool DeleteMovie(Movie movie)
         {
-            _fakeDB.deleteMovie(movie);
-            return false;
+            return _fakeDB.DeleteMovie(movie);
         }
 
         public List<Movie> GetAllMovies()
         {
-            return _fakeDB.getAllMovies();
+            return _fakeDB.GetAllMovies();
         }
 
         public Movie GetMovie(int id)
         {
-            return GetAllMovies().Find(m=>m.GetId()==id);
+            List<Movie> movies = GetAllMovies();
+            for (int i = 0; i < movies.Count; i++)
+            {
+                if(movies[i].GetId().Equals(id))
+                    return movies[i];
+            }
+            return new Movie(1,"");
         }
 
         public bool UpdateMovie(Movie movie)

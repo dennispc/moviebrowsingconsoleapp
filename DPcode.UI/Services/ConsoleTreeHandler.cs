@@ -10,9 +10,10 @@ namespace moviebrowsingconsoleapp.DPcode.UI.Services
         private IMenu _menu;
         private IConsoleAsker _consoleAsker;
 
-        public ConsoleTreeHandler(IMenu _menu, IConsoleAsker consoleAsker){
-            this._menu=_menu;
-            this._consoleAsker=consoleAsker;
+        public ConsoleTreeHandler(IMenu _menu, IConsoleAsker consoleAsker)
+        {
+            this._menu = _menu;
+            this._consoleAsker = consoleAsker;
         }
         public IMenu GetCurrentBranch()
         {
@@ -22,25 +23,28 @@ namespace moviebrowsingconsoleapp.DPcode.UI.Services
         public string GetResponse()
         {
             int number = _consoleAsker.GetIntFromTerminal("");
-            if(number<_menu.GetBraches().Count)
-            return _menu.GetBraches()[number-1].GetDescriptor();
-            else 
-            throw new ArgumentOutOfRangeException();
+            if (number <= 0)
+                return "stop";
+            if (number <= _menu.GetBraches().Count)
+                return _menu.GetBraches()[number - 1].GetDescriptor();
+            else
+                throw new ArgumentOutOfRangeException();
         }
 
         public void PrintMenu()
         {
             Console.WriteLine();
             List<IMenu> menus = _menu.GetBraches();
-            for(int i = 0; i< menus.Count;i++)
+            for (int i = 0; i < menus.Count; i++)
             {
-                Console.WriteLine($"{(i+1)} : {menus[i].GetDescriptor()}");
+                Console.WriteLine($"{(i + 1)} : {menus[i].GetDescriptor()}");
             }
+            Console.WriteLine("<=0 : End session.");
         }
         public void PrintMenu(IMenu menu)
         {
             List<IMenu> menus = menu.GetBraches();
-            for(int i = 0; i< menus.Count;i++)
+            for (int i = 0; i < menus.Count; i++)
             {
                 Console.WriteLine($"{i} : {menus[i].GetDescriptor()}");
             }

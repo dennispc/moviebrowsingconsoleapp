@@ -10,17 +10,19 @@ namespace moviebrowsingconsoleapp.DPcode.Core.Model{
             return _id;
         }
 
+        public void SetId(int id){
+            _id=id;
+        }
+
         public Movie(int year, string title){
             this.title=title;
             this.year=year;
         }
 
-        public Movie(int _id, int year, string title){
-            this._id=_id;
+        public Movie(int id, int year, string title){
+            this._id=id;
             this.year=year;
             this.title=title;
         }
-
-        
     }
 }

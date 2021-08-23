@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 using moviebrowsingconsoleapp.DPcode.Core.Model;
 using moviebrowsingconsoleapp.DPcode.Infrastructure.Data.IRepositories;
 
@@ -6,11 +7,13 @@ namespace moviebrowsingconsoleapp.Infrastructure
 {
     public class FakeDB : IFakeDB
     {
-        public static List<Movie> movies = new List<Movie>();
+        private List<Movie> movies = new List<Movie>();
 
         public FakeDB(){
-            for(int i = 0 ; i < 5 ; i++)
-            AddMovie(new Movie(120+i,("mov"+i)));
+            for (int i = 0; i < 6; i++)
+            {
+                AddMovie(new Movie(i+1,100+i,("mov"+i)));
+            }
         }
         public Movie AddMovie(Movie movie)
         {
@@ -20,20 +23,21 @@ namespace moviebrowsingconsoleapp.Infrastructure
             return movie;
         }
 
-        public bool deleteMovie(Movie movie)
+        public bool DeleteMovie(Movie movie)
         {
-            movies.Remove(movie);
-            return true;
+            foreach (Movie item in movies)
+            {
+                if(item.GetId()==movie.GetId()){
+                    movies.Remove(item);
+                    return true;
+                    }
+            }
+            return false;
         }
 
-        public List<Movie> getAllMovies()
+        public List<Movie> GetAllMovies()
         {
             return movies;
-        }
-
-        public Movie getMovie(int id)
-        {
-            return movies[id];
         }
 
         public bool updateMovie(Movie movie)

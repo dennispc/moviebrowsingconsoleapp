@@ -7,5 +7,8 @@ namespace moviebrowsingconsoleapp.DPcode.UI.IServices{
         int GetIntFromTerminal(string str);
 
         Movie CreateNewMovie();
+        bool UpdateMovie();
+
+        bool DeleteMovie();
     }
 }

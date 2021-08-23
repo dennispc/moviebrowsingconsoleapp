@@ -23,10 +23,24 @@ namespace moviebrowsingconsoleapp.DPcode.UI.IServices
                 case "List movies" :
                 ListMovies();
                 break;
+                case "Update movies" :
+                UpdateMovie();
+                break;
+                case "Delete movie" :
+                DeleteMovie();
+                break;
+                case "stop":
+                Stop();
+                break;
                 default :
                 throw new System.NotImplementedException();
             }
             Program.Init();
+        }
+
+        private void Stop()
+        {
+            Program.FlipStopBool();
         }
 
         public void CreateMovie()
@@ -41,11 +55,14 @@ namespace moviebrowsingconsoleapp.DPcode.UI.IServices
 
         public void UpdateMovie()
         {
-            throw new System.NotImplementedException();
+            _consoleAsker.UpdateMovie();
         }
          public void DeleteMovie()
         {
-            throw new System.NotImplementedException();
+            if(_consoleAsker.DeleteMovie())
+            Console.WriteLine("Success!");
+            else
+            Console.WriteLine("Something went wrong!");
         }
     }
 }
